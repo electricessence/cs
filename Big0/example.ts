@@ -1,22 +1,18 @@
-function range(start: number, count:number): number[] {
-	return Array.apply(0, Array(count))
-		.map(function (element, index) {
-			return index + start;
-		});
-}
-
+import {range} from '../Arrays/range';
 
 function suma_de_n(n: number): number{
 	// Partida
 	var partida = Date.now();
 
 	// Corre la funcion
-	var suma = 0;
-	for(var i in range(0, n)){
+	var suma:number = 0;
+	for(let i of range(0, n)){
 		suma += i
 	}
 	
 	var fin = Date.now();
+
+	console.log(partida,fin);
 	
 
 	return suma
